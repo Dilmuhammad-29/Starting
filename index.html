@@ -1,24 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GalaxyGaming</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="head-logo"><a href="#">GalaxyGaming</a></div>
-        <form>
-            <input class="header-search" type="search" placeholder="Search...">
-            <input class="header-search-btn" type="submit" value="go">
-            <button class="theme-toggle" type="button">Theme</button>
-            <a class="basket-link" href="#basket">Basket</a>
-            <a class="login-link" href="#log">Log in</a>
-            <a class="profile-link" href="#profile">Profile</a>
+      <nav class="header-nav">
+        <form action="https://echo.htmlacademy.ru" class="head-form">
+          <div class="head-logo"><a href="#">GalaxyGaming</a></div>
+          <div class="search-box">
+            <input
+              class="search-input"
+              type="search"
+              name="search"
+              placeholder="Search..."
+            />
+            <button class="search-submit" type="submit">Go</button>
+          </div>
+          <div class="nav-end">
+            <button class="theme-toggle" type="button"><img src="img/dark-theme.svg" alt="" width="50px"></button>
+            <a class="basket-link" href="#basket"><img src="img/basket-free-material-svgrepo-com.svg" alt="img" width="40px"></a>
+            <a class="login-link" href="#log"><img src="img/register.svg" alt="img" width="40px"></a>
+            <a class="profile-link" href="#profile"><img src="img/profile-1341.svg" alt="img" width="40px"></a>
+          </div>
         </form>
-
+      </nav>
+      <div class="main">
+        <nav>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">New Releasi</a></li>
+          <li><a href="#">Up Coming</a></li>
+          <li><a href="#">Old Gold</a></li>
+        </nav>
+      </div>
     </header>
+  </body>
+</html>
