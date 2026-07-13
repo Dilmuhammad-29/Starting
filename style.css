@@ -3,7 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Geomini", sans-serif;
+  transition-duration: 0.4s;
 }
+
+body{
+  background: #0b1020;
+}
+
+/* Header */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -18,6 +26,8 @@
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 1;
+  border-bottom: 0.2px solid #2f3d5e;
 }
 
 .head-logo {
@@ -61,20 +71,58 @@
 .search-input {
   padding: 10px 20px;
   border-radius: 5px;
-  border: none;
+  border: 0.2px solid #35466b;
   border-radius: 50px;
   font-size: 22px;
-  width: 400px;
+  width: 800px;
   transition-duration: 0.4s;
+  background: #1a2236;
+  color: #7f8ca8;
+  height: 48px;
 }
 
 .search-input:focus {
   outline: none;
-  box-shadow: #fff 0 0 10px;
+  background: #4f8cff;
+  box-shadow: 0 0 30px rgba(79, 140, 255, 0.25);
+  color: #161c28;
+  font-weight: 600;
+  height: 48px;
+}
+
+.search-input::placeholder{
+  color: #7f8ca8;
+  transition-duration: 0.2s;
+  font-weight: 400;
+}
+
+.search-input:focus::placeholder{
+  color: #161c28;
+}
+
+.search-box:focus-within .search-submit{
+  background-color: #4f8cff;
+  color: #161c28;
+  /* font-weight: 600; */
+}
+
+.search-box:focus-within .search-input{
+  background-color: #4f8cff;
+  color: #161c28;
+  box-shadow: 0 0 30px rgba(79, 140, 255, 0.25);
+  font-weight: 600;
+}
+
+.search-box:focus-within .search-input::placeholder{
+  color: #161c28;
+}
+
+.search-box:focus-within .search-submit [data-lucide]{
+  color: #161c28;
 }
 
 .search-submit {
-  padding: 10px 20px;
+  padding: 0px 15px;
   border-radius: 5px;
   border: none;
   border-top-right-radius: 50px;
@@ -83,8 +131,18 @@
   border-bottom-left-radius: 0px;
   font-size: 22px;
   outline: none;
-  margin-left: -71.50px;
+  margin-left: -73.55px;
+  background: #1a2236;
+  border: 0.1px solid #35466b;
+  color: #7f8ca8;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  width: 75px;
+  height: 48px;
+  padding-top: 3px;
 }
+
+/* Side navbar */
 
 .main {
   padding-top: 86px;
@@ -106,7 +164,7 @@
 .profile-link {
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background-color: #324e97;
   outline: none;
   border: 0;
   border-radius: 10px;
@@ -122,4 +180,132 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 400px;
+  border-right: 1px solid #2f3d5e;
+  position: fixed;
+  background-color: #1a1a1a;
+}
+
+.main nav{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding:  0 0 0px 100px;
+  border-bottom: 1px solid #2f3d5e;
+
+}
+
+.main nav li{
+  list-style: none;
+  width: max-content;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main nav li:hover{
+  scale: 1.2;
+  color: #000;
+}
+
+.main nav li::after {
+  content: '';
+  transition-duration: 0.4s;
+  width: 0%;
+  height: 1px;
+  background: #4f8cff;
+  position: absolute;
+  /* left: 10px; */
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main nav li:hover::after{
+  width: 90%;
+}
+
+.main nav li a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #42587e;
+  font-size: 24px;
+  transition-duration: 0.2s;
+}
+
+.main nav li:hover a{
+  scale: 1.1;
+  color: #4283fd;
+  font-weight: 400;
+  text-shadow: 0 0 2px #4f8cff;
+}
+
+.main-contact{
+  height: 30%;
+  display: flex;
+  align-items: center;
+  /* padding:  0 0 0px 100px; */
+}
+
+.main-contact div{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.i {
+  width: 35px;
+  height: 35px;
+  color: #b9c3d6;
+}
+
+.search-submit .i{
+  padding-right: 5px;
+}
+
+.profile-link .i{
+  width: 40px;
+  height: 40px;
+}
+
+.c1 a, .c2 a {
+  text-decoration: none;
+  color: #b9c3d6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c1 a:hover, .c2 a:hover{
+  scale: 1.2;
+}
+
+/*  Main content */
+
+.aside{
+  margin-top: 90px;
+  margin-left: 405px;
+  padding: 10px;
+}
+
+p{
+  color: #fff;
+  font-size: 25px;
+  text-align: start;
 }

@@ -15,7 +15,7 @@
   <body>
     <header class="header">
       <nav class="header-nav">
-        <form action="https://echo.htmlacademy.ru" class="head-form">
+        <form action="#" class="head-form">
           <div class="head-logo"><a href="#">GalaxyGaming</a></div>
           <div class="search-box">
             <input
@@ -24,13 +24,15 @@
               name="search"
               placeholder="Search..."
             />
-            <button class="search-submit" type="submit">Go</button>
+            <button class="search-submit" type="submit">
+              <i data-lucide="search"></i>
+            </button>
           </div>
           <div class="nav-end">
-            <button class="theme-toggle" type="button"><img src="img/dark-theme.svg" alt="" width="50px"></button>
-            <a class="basket-link" href="#basket"><img src="img/basket-free-material-svgrepo-com.svg" alt="img" width="40px"></a>
-            <a class="login-link" href="#log"><img src="img/register.svg" alt="img" width="40px"></a>
-            <a class="profile-link" href="#profile"><img src="img/profile-1341.svg" alt="img" width="40px"></a>
+            <button class="theme-toggle" type="button"><i class="i" data-lucide="sun-moon"></i></button>
+            <a class="basket-link" href="#basket"><i class="i" data-lucide="shopping-basket"></i></a>
+            <a class="login-link" href="#log"><i class="i" data-lucide="clipboard-pen"></i></a>
+            <a class="profile-link" href="#profile"><i class="i" data-lucide="circle-user-round"></i></a>
           </div>
         </form>
       </nav>
@@ -41,8 +43,37 @@
           <li><a href="#">New Releasi</a></li>
           <li><a href="#">Up Coming</a></li>
           <li><a href="#">Old Gold</a></li>
+          <li><a href="#">FPP Games</a></li>
+          <li><a href="#">TPP Games</a></li>
+          <li><a href="#">CO-OP</a></li>
         </nav>
+        <div class="main-contact">
+          <div class="c1">
+            <a href="#">
+              <i class="i" data-lucide="heart"></i>
+              <div class="wishlist">Wishlist</div>
+            </a>
+          </div>
+          <div class="c2">
+            <a href="#">
+              <i class="i" data-lucide="download"></i>
+              <div class="download">Downloaded</div>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
+
+
+    <aside class="aside">
+        
+    </aside>
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
+<script src="javascript/script.js"></script>
