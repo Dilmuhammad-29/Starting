@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Geomini", sans-serif;
-  transition-duration: 0.4s;
+  /* transition-duration: 0.4s; */
 }
 
 body{
@@ -322,7 +322,7 @@ body{
   /* border: solid red 1px; */
   text-align: center;
   font-size: 32px;
-  color: rgb(255, 140, 0);
+  color: #ff8c00;
   padding: 10px 0;
 }
 
@@ -409,7 +409,6 @@ img {
   color: #4283fd;
   font-size: 22px;
   text-align: center;
-  /* border: solid red 1px ; */
   width: 100%;
   height: auto;
   flex: 1;
@@ -417,4 +416,114 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Cards */
+
+.aside-cards {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards-title {
+  font-size: 32px;
+  color: #ff8c00;
+  padding: 20px 0;
+}
+
+.cards {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card{
+  width: 350px;
+  height: max-content;
+  /* border: solid green 1px; */
+  background: radial-gradient(#4283fd, #001438);
+}
+
+.cards-link {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* width: 90%; */
+  align-items: end;
+}
+
+.cardInBtn{
+  text-decoration: none;
+  display: inline-block;
+  width: max-content;
+  margin: 10px 3px;
+  padding: 10px;
+  background: linear-gradient(#0ea401, #086500);
+  color: #d3d7cc;
+  border-radius: 2px;
+  transition-duration: 0.2s;
+}
+
+.cardInBtn:hover {
+  text-shadow: 0 0 1px #fff;
+  box-shadow: 0 0 10px  #0ea401;
+}
+
+.card .bottom-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+  /* position: relative; */
+}
+
+.card .bottom-link label{
+  position: relative;
+  width: max-content;
+  height: max-content;
+  border-radius: 2px;
+  overflow: hidden;
+  transition-duration: 0.2s;
+}
+
+.card .bottom-link label input {
+  position: absolute;
+  display: none;
+}
+
+.card .bottom-link label .checkOne:checked + a .i{
+  fill: #b9c3d6;
+}
+
+.card .bottom-link label .checkTwo:checked + a .i{
+  fill: #b9c3d6;
+}
+
+.card .bottom-link label a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  background: linear-gradient(#0ea401, #086500);
+  color: #b9c3d6;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 0.2s;
+}
+
+.card .bottom-link a .i{
+  width: 21px;
+  height: max-content;
+  transition-duration: 0s;
+}
+
+.card .bottom-link label:hover {
+  text-shadow: 0 0 1px #fff;
+  box-shadow: 0 0 10px #0ea401;
 }
