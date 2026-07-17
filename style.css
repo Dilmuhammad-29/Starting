@@ -527,3 +527,64 @@ img {
   text-shadow: 0 0 1px #fff;
   box-shadow: 0 0 10px #0ea401;
 }
+
+/*  Publisher cards */
+
+.publisher {
+  width: 100%;
+  height: 230px;
+  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.publish-text {
+  font-size: 32px;
+  color: #ff8c00;
+  padding: 20px;
+}
+
+.publishing {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.publish-card {
+  height: 100%;
+  border: solid blue 1px;
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #324e97;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.publish-card .i{
+  width: 30px;
+  height: max-content;
+  margin-top: 8px;
+  transition-duration: 0.2s;
+  color: #324e97;
+}
+
+.publish-card a{
+  color: #324e97;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.publish-card:hover a{
+  color: #4283fd;
+}
+
+.publish-card:hover .i{
+  color: #4283fd;
+}
