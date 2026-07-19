@@ -74,7 +74,7 @@ body{
   border: 0.2px solid #35466b;
   border-radius: 50px;
   font-size: 22px;
-  width: 800px;
+  width: max(800px, 100%);
   transition-duration: 0.4s;
   background: #1a2236;
   color: #7f8ca8;
@@ -290,6 +290,7 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition-duration: 0.2s;
 }
 
 .c1 a:hover, .c2 a:hover{
@@ -306,6 +307,8 @@ body{
   flex-direction: column;
   align-items: flex-start;
   padding-top: 30px;
+  width: calc(100vw - 405px);
+  max-width: 1500px;
 }
 
 .hero {
@@ -357,7 +360,7 @@ body{
 }
 
 .slider {
-  width: 900px;
+  width: min(900px, 100%);
   height: 435px;
   align-self: center;
   display: flex;
@@ -444,7 +447,7 @@ img {
 }
 
 .card{
-  width: 350px;
+  width: min(350px, 100%);
   height: max-content;
   /* border: solid green 1px; */
   background: radial-gradient(#4283fd, #001438);
@@ -533,7 +536,6 @@ img {
 .publisher {
   width: 100%;
   height: 230px;
-  border: solid red 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -543,7 +545,7 @@ img {
 .publish-text {
   font-size: 32px;
   color: #ff8c00;
-  padding: 20px;
+  padding: 50px 0 20px 0;
 }
 
 .publishing {
@@ -555,7 +557,6 @@ img {
 
 .publish-card {
   height: 100%;
-  border: solid blue 1px;
   flex: 1;
   padding: 5px;
   display: flex;
@@ -565,26 +566,109 @@ img {
   font-size: 24px;
   cursor: pointer;
   margin: 0 10px;
+  background-image: url(img/Rockstar.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.publish-card:nth-child(2){
+  background: url(img/ubisoft.jpg) center / cover no-repeat;
+}
+
+.publish-card:nth-child(3){
+  background: url(img/valve-logo.jpg) center / cover no-repeat;
+}
+
+.publish-card:nth-child(4){
+  background: url(img/Naughty_Dog.webp) center / cover no-repeat;
+}
+
+.publish-card:nth-child(5){
+  background: url(img/santamonica.jpg) center / cover no-repeat;
+}
+
+.publish-card:nth-child(6){
+  background: url(img/netherrealm.jpg) center / cover no-repeat;
+}
+
+.publish-card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border: solid red 1px;
+  position: absolute;
+  opacity: 0.9;
+}
+
+.publish-card:hover::before {
+  background: #fff;
+  backdrop-filter: blur(10px);
 }
 
 .publish-card .i{
   width: 30px;
   height: max-content;
   margin-top: 8px;
-  transition-duration: 0.2s;
-  color: #324e97;
+  visibility: hidden;
+  color: #4283fd;
+  z-index: 1;
 }
 
 .publish-card a{
-  color: #324e97;
+  visibility: hidden;
   text-decoration: none;
-  transition-duration: 0.2s;
+  color: #4283fd;
+  z-index: 1;
 }
 
 .publish-card:hover a{
-  color: #4283fd;
+  visibility: visible;
 }
 
 .publish-card:hover .i{
-  color: #4283fd;
+  visibility: visible;
+}
+
+/* games with full information section */
+
+.popular-games-section {
+  width: 100%;
+  max-width: 800px;
+  /* border: solid red 1px; */
+  display: flex;
+  height: 800px;
+  align-self: center;
+  flex-direction: column;
+  margin-top: 50px;
+  background: #2d57a0;
+}
+
+.tab-section {
+  display: flex;
+  justify-content: space-between;
+  background: #1a2236;
+}
+
+.tab-section .text {
+  padding: 10px;
+  width: max-content;
+  height: max-content;
+  /* border: solid red 1px; */
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2rem;
+  color: #35466b;
+}
+
+.tab-section .text.active{
+  color: #4f8cff;
+  /* color: #4283fd; */
+  background: #2d57a0;
+  text-shadow: 0 0 2px #0059ff;
 }
